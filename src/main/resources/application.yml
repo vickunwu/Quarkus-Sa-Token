@@ -1,0 +1,9 @@
+greeting:
+  message: "hellox"
+sa-token:
+  token-name: Authorization
+  token-prefix: Bearer
+  token-style: simple-uuid
+  route:
+    exclude-paths:
+      - /auth/doLogin
