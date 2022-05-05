@@ -12,14 +12,11 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/hello")
 public class GreetingResource {
-    @Inject
-    GreetingConfig config;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     @QSaCheckRole("admin")
     public Uni<?> hello() {
-        StpUtil.kickout(10001);
         return Uni.createFrom().item(StpUtil.getTokenInfo());
     }
 }

@@ -62,7 +62,7 @@ public class SaTokenRecorder {
      *
      */
     public void setSaTokenDao() {
-        injectBean(SaTokenDao.class, SaManager::setSaTokenDao);
+        injectBean(SaTokenDaoRedissonImpl.class, SaManager::setSaTokenDao);
     }
 
     /**

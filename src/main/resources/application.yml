@@ -7,3 +7,10 @@ sa-token:
   route:
     exclude-paths:
       - /auth/doLogin
+quarkus:
+  redisson:
+    single-server-config:
+      address: redis://10.100.16.135:6379
+      password: SsoRedis@2022
+      database: 15
+    codec: org.redisson.codec.JsonJacksonCodec
